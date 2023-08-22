@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form #add (ngSubmit)="login(add)" class="form-group" [formGroup]="loginUser">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter The Name" required formControlName="name">
+        <span *ngIf="name && name.invalid && name.touched">Please enter the name</span>
+        <br>
+        <br>
+        <label for="Email" class="form-label">Email</label>
+        <input type="text" class="form-control" placeholder="Enter The Email" required formControlName="email">
+        <span *ngIf="email && email.invalid && email.touched">Please enter the name</span>
+        <br>
+        <br>
+        <label for="password" class="form-label">Password</label>
+        <input type="text" class="form-control" placeholder="Enter The Name" required formControlName="password">
+        <span *ngIf="password && password.invalid && password.touched">Please enter the password</span>
+        <br>
+        <br>
+        <button class="btn btn-primary"[disabled]="loginUser.invalid" type="submit">Submit</button>
+
+
+
+
+      </form>
+    </div>
+  </div>
+</div>
